@@ -1,4 +1,5 @@
 import React from 'react';
+import {ThemeContext} from '../App';
 
 class Timer extends React.Component {
 
@@ -32,13 +33,15 @@ class Timer extends React.Component {
 
   render() {
     return (
-      <div>
-        <header>
-          <h1>Simple Timer</h1>
-          <h3>{this.state.number}</h3>
-        </header>
-        {this.state.timerRunning ?<button onClick={this.stopTimer}>Stop timer</button> : <button onClick={this.startTimer}>Start timer</button> }
-      </div>
+            <div>
+                <header>
+                <ThemeContext.Consumer>
+                    {(globalValue) => <h1>Simple Timer {globalValue}</h1>}
+                </ThemeContext.Consumer>
+                <h3>{this.state.number}</h3>
+                </header>
+                {this.state.timerRunning ?<button onClick={this.stopTimer}>Stop timer</button> : <button onClick={this.startTimer}>Start timer</button> }
+            </div>
     );
   }
 }

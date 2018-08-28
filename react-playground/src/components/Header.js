@@ -5,7 +5,11 @@ class Header extends React.Component {
 
     static propTypes = {
         headerText: PropTypes.string.isRequired,
-        amount: PropTypes.number.isRequired
+        amount: PropTypes.number
+    }
+
+    static defaultProps = {
+        amount: 2
     }
 
     render() {
