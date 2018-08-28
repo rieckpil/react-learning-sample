@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Timer from './components/Timer';
+import Header from './components/Header';
 import classNames from 'classnames';
 
 class App extends React.Component {
@@ -29,6 +30,7 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
+        <Header headerText="Props are immutable" amount={3}/>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
