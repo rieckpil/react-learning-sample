@@ -26,3 +26,17 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.box {
+  font-size: 5em;
+}
+
+.alert {
+  background-color: aquamarine;
+  color: coral;
+}
+
+.dangerous {
+  color: red;
+  background-color: limegreen;
+}
