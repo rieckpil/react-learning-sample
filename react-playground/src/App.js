@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Timer from './components/Timer';
 import Header from './components/Header';
+import SimpleCounter from './components/SimpleCounter';
 import classNames from 'classnames';
 
 export const ThemeContext = React.createContext('global context');
@@ -47,6 +48,7 @@ class App extends React.Component {
           </ul>
           <button onClick={this.changeColor}>Change color</button>
           <Timer/>
+          <SimpleCounter/>
         </ThemeContext.Provider>
       </div>
     );
