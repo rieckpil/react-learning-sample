@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {connect} from 'react-redux';
+import {decrement, increment} from './actions';
 
 class App extends Component {
   render() {
@@ -28,19 +29,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    increment: () => {
-      dispatch({
-        type: 'INCREMENT'
-      })
-    },
-    decrement: () => {
-      dispatch({
-        type: 'DECREMENT'
-      })
-    }
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, {decrement,increment})(App);
